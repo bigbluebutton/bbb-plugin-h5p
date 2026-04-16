@@ -1,8 +1,8 @@
 {
   "requiredSdkVersion": "~0.0.84",
-  "name": "H5pPlugin",
-  "javascriptEntrypointUrl": "H5pPlugin.js",
-  "version": "0.1.0",
+  "name": "BbbPluginH5p",
+  "javascriptEntrypointUrl": "BbbPluginH5p.js",
+  "version": "0.0.1",
   "dataChannels": [
       {
           "name": "jsonContent",
