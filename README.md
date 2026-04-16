@@ -94,7 +94,8 @@ Preferebly, that bundled js file is placed into the Bigbluebutton's assets porti
 
 ```bash
 mkdir -p /var/www/bigbluebutton-default/assets/plugins/plugin-h5p/
-cp H5pPlugin.js /var/www/bigbluebutton-default/assets/plugins/plugin-h5p/
+cp dist/H5pPlugin.js /var/www/bigbluebutton-default/assets/plugins/plugin-h5p/
+cp dist/manifest.json /var/www/bigbluebutton-default/assets/plugins/plugin-h5p/
 ```
 
 This will make this plugin available on `https://<your-host>/plugins/plugin-h5p/H5pPlugin.js`
@@ -102,7 +103,7 @@ This will make this plugin available on `https://<your-host>/plugins/plugin-h5p/
 To use the plugin with BigBlueButton, add the plugin's manifest URL to the parameter as shown below:
 
 ```
-pluginManifests=[{"url":"http://<yourdomain>/path/to/manifest.json"}]
+pluginManifests=[{"url":"https://<yourdomain>/plugins/plugin-h5p/manifest.json"}]
 ```
 
 ## How to use it?
