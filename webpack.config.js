@@ -5,8 +5,8 @@ const path = require('path');
 module.exports = {
   entry: './src/index.tsx',
   output: {
-    filename: 'H5pPlugin.js',
-    library: 'H5pPlugin',
+    filename: 'BbbPluginH5p.js',
+    library: 'BbbPluginH5p',
     libraryTarget: 'umd',
     publicPath: '/',
     globalObject: 'this',

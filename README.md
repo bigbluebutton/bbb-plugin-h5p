@@ -23,7 +23,7 @@ Moreover, this plugin has its specific libraries to properly render the h5p-cont
 1. Build and deploy necessary libraries (make sure this is done inside the BBB's docker server):
 
 ```bash
-cd $HOME/src/h5p-plugin # Directory under which this plugin is placed in your computer. 
+cd $HOME/src/bbb-plugin-h5p # Directory under which this plugin is placed in your computer. 
 ./pack_dependencies.sh # This will fetch every library this plugin needs
 ./deploy_package.sh
 ```
@@ -57,7 +57,7 @@ Or something similar.
 2. Start the development server (outside of the BBB's docker server):
 
 ```bash
-cd $HOME/bbb/bigbluebutton/h5p-plugin
+cd $HOME/bbb/bigbluebutton/bbb-plugin-h5p
 npm install
 npm start
 ```
@@ -75,7 +75,7 @@ To build the plugin for production use, follow these steps:
 1. Build and deploy necessary libraries (make sure this is done inside the BBB's server):
 
 ```bash
-cd $HOME/src/h5p-plugin # Directory under which this plugin is placed in your computer. 
+cd $HOME/src/bbb-plugin-h5p # Directory under which this plugin is placed in your computer. 
 ./pack_dependencies.sh # This will fetch every library this plugin needs
 ./deploy_package.sh
 ```
@@ -83,27 +83,27 @@ cd $HOME/src/h5p-plugin # Directory under which this plugin is placed in your co
 2. Build and deploy the plugin itself:
 
 ```bash
-cd $HOME/src/h5p-plugin
+cd $HOME/src/bbb-plugin-h5p
 npm install
 npm run build-bundle
 ```
 
-The above commands will generate the `dist` folder containing the bundled JavaScript file named `H5pPlugin.js`. This file can be hosted on any HTTPS server.
+The above commands will generate the `dist` folder containing the bundled JavaScript file named `BbbPluginH5p.js`. This file can be hosted on any HTTPS server.
 
 Preferebly, that bundled js file is placed into the Bigbluebutton's assets portion of the server, so for that, do the following: 
 
 ```bash
-mkdir -p /var/www/bigbluebutton-default/assets/plugins/plugin-h5p/
-cp dist/H5pPlugin.js /var/www/bigbluebutton-default/assets/plugins/plugin-h5p/
-cp dist/manifest.json /var/www/bigbluebutton-default/assets/plugins/plugin-h5p/
+mkdir -p /var/www/bigbluebutton-default/assets/plugins/bbb-plugin-h5p/
+cp dist/BbbPluginH5p.js /var/www/bigbluebutton-default/assets/plugins/bbb-plugin-h5p/
+cp dist/manifest.json /var/www/bigbluebutton-default/assets/plugins/bbb-plugin-h5p/
 ```
 
-This will make this plugin available on `https://<your-host>/plugins/plugin-h5p/H5pPlugin.js`
+This will make this plugin available on `https://<your-host>/plugins/bbb-plugin-h5p/BbbPluginH5p.js`
 
 To use the plugin with BigBlueButton, add the plugin's manifest URL to the parameter as shown below:
 
 ```
-pluginManifests=[{"url":"https://<yourdomain>/plugins/plugin-h5p/manifest.json"}]
+pluginManifests=[{"url":"https://<yourdomain>/plugins/bbb-plugin-h5p/manifest.json"}]
 ```
 
 ## How to use it?
