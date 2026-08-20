@@ -1,5 +1,5 @@
 {
-  "requiredSdkVersion": "~0.0.84",
+  "requiredSdkVersion": "^0.1.5",
   "name": "BbbPluginH5p",
   "javascriptEntrypointUrl": "BbbPluginH5p.js",
   "version": "0.0.1",
