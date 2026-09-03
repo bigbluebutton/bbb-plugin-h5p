@@ -2,8 +2,7 @@ import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import {
-  ActionButtonDropdownOption,
-  ActionButtonDropdownSeparator,
+  MediaAreaOption,
   BbbPluginSdk,
   GenericContentMainArea,
   PluginApi,
@@ -145,11 +144,10 @@ function PluginManager(
       pluginApi.setPresentationToolbarItems([currentObjectToSendToClient]);
 
       if (showingPresentationContent) {
-        pluginApi.setActionButtonDropdownItems([
-          new ActionButtonDropdownSeparator(),
-          new ActionButtonDropdownOption({
+        pluginApi.setMediaAreaItems([
+          new MediaAreaOption({
             label: 'Remove H5P from presentation area',
-            icon: 'copy',
+            icon: { iconName: 'copy' },
             tooltip: 'Remove H5P plugin',
             allowed: true,
             onClick: () => {
@@ -160,10 +158,10 @@ function PluginManager(
           }),
         ]);
       } else {
-        pluginApi.setActionButtonDropdownItems([]);
+        pluginApi.setMediaAreaItems([]);
       }
     } else {
-      if (!showingPresentationContent) pluginApi.setActionButtonDropdownItems([]);
+      if (!showingPresentationContent) pluginApi.setMediaAreaItems([]);
       pluginApi.setPresentationToolbarItems([]);
     }
   }, [currentUser, showingPresentationContent, currentText]);
