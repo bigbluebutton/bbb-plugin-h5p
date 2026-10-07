@@ -1,6 +1,6 @@
 {
   "name": "bbb-plugin-h5p",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "main": "./src/index.tsx",
   "dependencies": {
