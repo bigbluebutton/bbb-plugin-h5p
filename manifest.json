@@ -2,7 +2,7 @@
   "requiredSdkVersion": "^1.0.0-beta.2",
   "name": "BbbPluginH5p",
   "javascriptEntrypointUrl": "BbbPluginH5p.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dataChannels": [
     {
       "name": "jsonContent",
